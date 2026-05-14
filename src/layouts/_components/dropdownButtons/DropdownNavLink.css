@@ -1,0 +1,20 @@
+.dashboard-icon{
+  stroke: var(--color-purple-100);
+  width: 22px;
+
+  &.dashboard{
+    fill: var(--color-purple-100);
+  }
+}
+
+button.nav-btn:hover span {
+  color: var(--color-light);
+}
+
+button.nav-btn:hover .dashboard-icon {
+  stroke: var(--color-light);
+
+  &.dashboard{
+    fill: var(--color-light)
+  }
+}

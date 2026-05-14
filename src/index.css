@@ -1,0 +1,30 @@
+@import "tailwindcss";
+:root{
+  --color-purple-900: #05050c ;
+  --color-purple-800: #0f1021  ;
+  --color-purple-200: #6a6d9e  ;
+  --color-purple-100: #b0b0b1  ;
+  --color-light: #fff ;
+  --color-accent: #bff747 ;
+  --color-accent-100: #bff47475 ;
+  --color-br: #242534;
+  --br: 10px;
+}
+@theme{
+  --color-accent : var(--color-accent);
+  --color-accent-100 : var(--color-accent-100);
+  --color-purple-900 : var(--color-purple-900);
+  --color-purple-800 : var(--color-purple-800);
+  --color-purple-200 : var(--color-purple-200);
+  --color-light : var(--color-light);
+  --color-br : var(--color-br);
+  --radius-curve: var(--br)
+}
+
+body{
+  direction: rtl
+}
+
+svg:is(.auth-form-icon){
+  stroke: var(--color-purple-200);
+}
