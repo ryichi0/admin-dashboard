@@ -4,16 +4,16 @@ import './DropdownNavLink.css'
 import { Link } from 'react-router-dom';
 
 export default function DropdownNavLink({ title, icon, sidebarOpen, subMenu }) {
-  const [openDropdown, setOpenDropdown] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState(false);
 
   return (
     <li>
       <button
-        onClick={sidebarOpen ? () => setOpenDropdown(prev => !prev) : null}
+        onClick={sidebarOpen ? () => setActiveSubmenu(prev => !prev) : null}
         className={`nav-btn relative w-full h-13 flex gap-3 items-center px-2 rounded-curve 
           ${!sidebarOpen ? "justify-center cursor-default" : "cursor-pointer"}
             transition-all 
-           ${openDropdown ? "bg-accent-100 text-light" : "text-purple-100 "}
+           ${activeSubmenu ? "border border-accent text-light" : "text-purple-100 "}
            `}>
 
 
@@ -21,12 +21,12 @@ export default function DropdownNavLink({ title, icon, sidebarOpen, subMenu }) {
         {sidebarOpen &&
           <>
             <span>{title}</span>
-            <SvgChevronLeft className={`absolute left-2 transition-all ${openDropdown && "-rotate-90 stroke-light!"}`} />
+            <SvgChevronLeft className={`absolute left-2 transition-all ${activeSubmenu && "-rotate-90 stroke-light!"}`} />
           </>}
       </button>
 
       {sidebarOpen &&
-        <ul className={`${openDropdown ? "max-h-80 my-4" : "max-h-0"} transition-all ms-16 flex flex-col gap-1.5 overflow-hidden`}>
+        <ul className={`${activeSubmenu ? "max-h-80 my-4" : "max-h-0"} transition-all ms-16 flex flex-col gap-1.5 overflow-hidden`}>
           {subMenu?.map((item, index) =>
             <Link
               key={index}

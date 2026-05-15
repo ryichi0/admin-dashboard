@@ -3,12 +3,37 @@ import SvgLogo from '../icons/SvgLogo'
 import SvgDashboard from '../icons/SvgDashboard'
 import SvgSettings from '../icons/SvgSettings'
 import DropdownNavLink from './_components/dropdownButtons/DropdownNavLink'
+import SvgTools from '../icons/SvgTools'
+import SvgApp from '../icons/SvgApp'
+import SvgMap from '../icons/SvgMap'
+import SvgPlus from '../icons/SvgPlus'
 
 export default function Sidebar({ sidebarOpen }) {
 
   const SIDEBAR_MENU = [
     {
       title: "داشبورد", icon: <SvgDashboard />,
+      subMenu: [
+        { title: "صفحه اول", path: "/" },
+        { title: "صفحه دوم", path: "/" },
+      ]
+    },
+    {
+      title: "اپلیکیشن", icon: <SvgApp />,
+      subMenu: [
+        { title: "صفحه اول", path: "/" },
+        { title: "صفحه دوم", path: "/" },
+      ]
+    },
+    {
+      title: "ابزارها", icon: <SvgTools />,
+      subMenu: [
+        { title: "صفحه اول", path: "/" },
+        { title: "صفحه دوم", path: "/" },
+      ]
+    },
+    {
+      title: "نقشه سایت", icon: <SvgMap />,
       subMenu: [
         { title: "صفحه اول", path: "/" },
         { title: "صفحه دوم", path: "/" },
@@ -34,9 +59,9 @@ export default function Sidebar({ sidebarOpen }) {
       </div>
 
       <div className={`${sidebarOpen ? 'px-3' : ""} py-5 flex flex-col gap-3`}>
-        <button className={`${sidebarOpen ? 'rounded-curve' : "rounded-none"} bg-accent  cursor-pointer py-3`}>
+        <button className={`${sidebarOpen ? 'rounded-curve' : "rounded-none"} bg-accent flex gap-1 justify-center items-center cursor-pointer py-3`}>
           {sidebarOpen && <span>افزودن پروژه</span>}
-          <span>+</span>
+          <SvgPlus />
         </button>
         <ul className="flex flex-col py-6">
           {SIDEBAR_MENU.map((item, index) =>

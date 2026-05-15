@@ -2,7 +2,7 @@
   stroke: var(--color-purple-100);
   width: 22px;
 
-  &.dashboard{
+  &.filled-icon{
     fill: var(--color-purple-100);
   }
 }
@@ -14,7 +14,7 @@ button.nav-btn:hover span {
 button.nav-btn:hover .dashboard-icon {
   stroke: var(--color-light);
 
-  &.dashboard{
+  &.filled-icon{
     fill: var(--color-light)
   }
 }
