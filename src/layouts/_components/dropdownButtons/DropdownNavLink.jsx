@@ -7,7 +7,7 @@ export default function DropdownNavLink({ title, icon, sidebarOpen, subMenu }) {
   const [activeSubmenu, setActiveSubmenu] = useState(false);
 
   return (
-    <li>
+    <li className="relative">
       <button
         onClick={sidebarOpen ? () => setActiveSubmenu(prev => !prev) : null}
         className={`nav-btn relative w-full h-13 flex gap-3 items-center px-2 rounded-curve 
@@ -25,7 +25,7 @@ export default function DropdownNavLink({ title, icon, sidebarOpen, subMenu }) {
           </>}
       </button>
 
-      {sidebarOpen &&
+      {sidebarOpen ?
         <ul className={`${activeSubmenu ? "max-h-80 my-4" : "max-h-0"} transition-all ms-16 flex flex-col gap-1.5 overflow-hidden`}>
           {subMenu?.map((item, index) =>
             <Link
@@ -35,7 +35,22 @@ export default function DropdownNavLink({ title, icon, sidebarOpen, subMenu }) {
               {item?.title}
             </Link>
           )}
-        </ul>}
+        </ul>
+        :
+        <ul className={`active-side-menu hidden`}>
+          {subMenu?.map((item, index) =>
+            <Link
+              key={index}
+              to={item?.path}
+              className="text-purple-100 hover:text-light cursor-pointer">
+              {item?.title}
+            </Link>
+          )}
+        </ul>
+
+      }
+
+
     </li>
 
   )

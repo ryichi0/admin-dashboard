@@ -1,8 +1,8 @@
-.dashboard-icon{
+.dashboard-icon {
   stroke: var(--color-purple-100);
   width: 22px;
 
-  &.filled-icon{
+  &.filled-icon {
     fill: var(--color-purple-100);
   }
 }
@@ -14,7 +14,23 @@ button.nav-btn:hover span {
 button.nav-btn:hover .dashboard-icon {
   stroke: var(--color-light);
 
-  &.filled-icon{
+  &.filled-icon {
     fill: var(--color-light)
   }
+}
+
+li:hover .active-side-menu {
+  min-width: 200px;
+  position: absolute;
+  right: 60px;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  border-radius: 10px;
+  border: .5px solid var(--color-br);
+  background-color: var(--color-purple-800);
+
 }

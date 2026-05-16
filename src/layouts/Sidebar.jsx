@@ -1,57 +1,16 @@
-import React from 'react'
 import SvgLogo from '../icons/SvgLogo'
-import SvgDashboard from '../icons/SvgDashboard'
-import SvgSettings from '../icons/SvgSettings'
-import DropdownNavLink from './_components/dropdownButtons/DropdownNavLink'
-import SvgTools from '../icons/SvgTools'
-import SvgApp from '../icons/SvgApp'
-import SvgMap from '../icons/SvgMap'
 import SvgPlus from '../icons/SvgPlus'
+import DropdownNavLink from './_components/dropdownButtons/DropdownNavLink'
+import { SIDEBAR_MENU } from '../constant/LayoutSidebar'
 
 export default function Sidebar({ sidebarOpen }) {
 
-  const SIDEBAR_MENU = [
-    {
-      title: "داشبورد", icon: <SvgDashboard />,
-      subMenu: [
-        { title: "صفحه اول", path: "/" },
-        { title: "صفحه دوم", path: "/" },
-      ]
-    },
-    {
-      title: "اپلیکیشن", icon: <SvgApp />,
-      subMenu: [
-        { title: "صفحه اول", path: "/" },
-        { title: "صفحه دوم", path: "/" },
-      ]
-    },
-    {
-      title: "ابزارها", icon: <SvgTools />,
-      subMenu: [
-        { title: "صفحه اول", path: "/" },
-        { title: "صفحه دوم", path: "/" },
-      ]
-    },
-    {
-      title: "نقشه سایت", icon: <SvgMap />,
-      subMenu: [
-        { title: "صفحه اول", path: "/" },
-        { title: "صفحه دوم", path: "/" },
-      ]
-    },
-    {
-      title: "تنظیمات", icon: <SvgSettings />,
-      subMenu: [
-        { title: "صفحه اول", path: "/" },
-        { title: "صفحه دوم", path: "/" },
-      ]
-    },
-  ]
+  
   return (
     <aside
       className={
         `${sidebarOpen ? "w-[250px] md:w-[290px]" : "w-0 md:w-[60px]"}
-           transition-all ease-in-out min-h-screen fixed right-0 bg-purple-800 outline`}>
+           transition-all ease-in-out min-h-screen fixed right-0 z-30 bg-purple-800 outline`}>
 
       <div className="w-full h-20 overflow-hidden flex gap-3 justify-center items-center">
         <SvgLogo className="w-12" />
