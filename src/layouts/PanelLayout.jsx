@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import Sidebar from './Sidebar'
 import Main from './Main'
 
-export default function PanelLayout() {
+export default function PanelLayout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(true);
-  
+
   return (
     <div className="relative w-full min-h-screen flex">
 
@@ -12,7 +12,9 @@ export default function PanelLayout() {
         sidebarOpen={sidebarOpen} />
       <Main
         sidebarOpen={sidebarOpen}
-        setSidebarOpen={setSidebarOpen} />
+        setSidebarOpen={setSidebarOpen} >
+        {children}
+      </Main>
 
     </div>
   )

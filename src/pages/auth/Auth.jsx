@@ -4,7 +4,6 @@ import SvgLogo from '../../icons/SvgLogo'
 import Button from './_components/Button'
 import './Auth.css'
 import { LoginForm, RegisterForm } from './_components/AuthForm'
-import SvgAuthFooter from '../../icons/SvgAuthFooter'
 
 
 

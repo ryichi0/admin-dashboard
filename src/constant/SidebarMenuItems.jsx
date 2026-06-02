@@ -7,6 +7,7 @@ import SvgTools from "../icons/SvgTools";
 export const SIDEBAR_MENU = [
     {
       title: "داشبورد", icon: <SvgDashboard />,
+      path:"/p/dashboard",
       subMenu: [
         { title: "صفحه اول", path: "/" },
         { title: "صفحه دوم", path: "/" },

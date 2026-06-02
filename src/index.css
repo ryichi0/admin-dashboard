@@ -28,3 +28,7 @@ body{
 svg:is(.auth-form-icon){
   stroke: var(--color-purple-200);
 }
+
+input{
+  outline: none;
+}
