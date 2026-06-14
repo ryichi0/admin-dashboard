@@ -4,9 +4,11 @@ import { SIDEBAR_MENU } from '../constant/SidebarMenuItems'
 import SidebarProfile from './_components/SidebarProfile'
 import SwitchThemeButton from './_components/SwitchThemeButton'
 import SidebarItems from './_components/SidebarItems'
+import { useState } from 'react'
 
 export default function Sidebar({ sidebarOpen }) {
 
+  const [itemIndex, setItemIndex] = useState(-1)
 
   return (
     <aside
@@ -37,12 +39,12 @@ export default function Sidebar({ sidebarOpen }) {
         <ul className="flex flex-col">
           {SIDEBAR_MENU.map((item, index) =>
             <SidebarItems
+              itemIndex={itemIndex}
+              setItemIndex={setItemIndex}
+              i={index}
               sidebarOpen={sidebarOpen}
               key={index}
-              title={item?.title}
-              icon={item?.icon}
-              path={item?.path}
-              subMenu={item?.subMenu} />)}
+              sidebarItem={item} />)}
         </ul>
 
         {sidebarOpen &&
