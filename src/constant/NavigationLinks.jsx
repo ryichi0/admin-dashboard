@@ -4,19 +4,15 @@ import SvgMap from "../icons/SvgMap";
 import SvgSettings from "../icons/SvgSettings";
 import SvgTools from "../icons/SvgTools";
 
-export const SIDEBAR_MENU = [
+export const NAV_LINKS = [
     {
       title: "داشبورد", icon: <SvgDashboard />,
       path:"/p/dashboard",
-      subMenu: [
-        { title: "صفحه اول", path: "/" },
-        { title: "صفحه دوم", path: "/" },
-      ]
     },
     {
       title: "اپلیکیشن", icon: <SvgApp />,
       subMenu: [
-        { title: "صفحه اول", path: "/" },
+        { title: "مدیریت اپلیکیشن", path: "/p/application/management" },
         { title: "صفحه دوم", path: "/" },
       ]
     },
@@ -29,16 +25,10 @@ export const SIDEBAR_MENU = [
     },
     {
       title: "نقشه سایت", icon: <SvgMap />,
-      subMenu: [
-        { title: "صفحه اول", path: "/" },
-        { title: "صفحه دوم", path: "/" },
-      ]
+      path:"/p/sitemap",
     },
     {
       title: "تنظیمات", icon: <SvgSettings />,
-      subMenu: [
-        { title: "صفحه اول", path: "/" },
-        { title: "صفحه دوم", path: "/" },
-      ]
+      path:"/p/settings",
     },
   ]

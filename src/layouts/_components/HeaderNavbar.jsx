@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import SvgMenu from '../../icons/SvgMenu'
 import SvgLogo from '../../icons/SvgLogo'
 import CascadeProfileSettings from './CascadeProfileSettings';
+import { useLayoutStore } from '../../store/LayoutStore';
 
 export default function HeaderNavbar({ setSidebarOpen }) {
-
+  const { pageTitle } = useLayoutStore()
   const [cascadeMenu, setCascadeMenu] = useState(false);
 
 
@@ -17,7 +18,7 @@ export default function HeaderNavbar({ setSidebarOpen }) {
           onClick={() => setSidebarOpen(prev => !prev)}>
           <SvgMenu className="stroke-accent! w-8!" />
         </button>
-        <h2 className="text-lg">داشبورد</h2>
+        <h2 className="text-lg">{pageTitle}</h2>
       </div>
 
 

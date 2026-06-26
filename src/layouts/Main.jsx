@@ -7,21 +7,22 @@ import Dashboard from '../pages/Dashboard'
 import Settings from '../pages/Settings'
 import Tools from '../pages/Tools'
 import SiteMap from '../pages/SiteMap'
-import Application from '../pages/Application'
+import Application from '../pages/application/Application'
+import Management from '../pages/application/Management'
 
 
 export default function Main({ sidebarOpen, setSidebarOpen, children }) {
 
   const ROUTES = [
-    {path: "dashboard", element: <Dashboard />},
-    {path: "settings", element: <Settings />},
-    {path: "tools", element: <Tools />},
-    {path: "sitemap", element: <SiteMap />},
-    {path: "application", element: <Application />},
+    {path: "/dashboard", element: <Dashboard />},
+    {path: "/settings", element: <Settings />},
+    {path: "/tools", element: <Tools />},
+    {path: "/sitemap", element: <SiteMap />},
+    {path: "/application/management", element: <Management />},
   ]
   return (
     <main className={`text-light ${sidebarOpen
-      ? "w-full md:w-[calc(100%-290px)]"
+      ? "w-full md:w-[calc(100%-290px)]" 
       : "w-full md:w-[calc(100%-60px)]!"}
         overflow-hidden min-h-screen absolute left-0 bg-purple-900 transition-all ease-in-out`}>
 

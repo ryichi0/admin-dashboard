@@ -1,10 +1,9 @@
-import React, { useContext, useState } from 'react'
-import { themeContext } from '../../App';
+import React, { useState } from 'react'
+import { useLayoutStore } from '../../store/LayoutStore';
 
 export default function SwitchThemeButton() {
 
-  const {theme, setTheme} = useContext(themeContext)
-  console.log(theme);
+  const {theme, setTheme} = useLayoutStore()
 
   return (
     <div className="w-full p-1 border border-br flex gap-2 rounded-curve bg-purple-800">
