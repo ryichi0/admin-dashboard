@@ -137,9 +137,9 @@ export default function Dashboard() {
   }, [])
 
   return (
-    <div className="w-full h-200 flex p-2 gap-7">
+    <div className="w-full h-200 flex items-start p-2 gap-7">
       <div className=" min-h-full w-9/12 flex flex-col gap-7">
-        <div className="flex-1/5! grid grid-cols-4 gap-7 text-center">
+        <div className="flex-1! min-h-50 grid grid-cols-4 gap-7 text-center">
           {[0, 0, 0, 0].map((item, index) => {
             return <div key={index} className="border border-br rounded-lg flex flex-col justify-between items-start p-4">
               <div className="bg-accent size-12 rounded-2xl flex justify-center items-center">
@@ -166,8 +166,8 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-      <div className="w-3/12 bg-purple-800 border border-br rounded-2xl p-4">
-        <div className="flex flex-col bg-purple-900 rounded-2xl">
+      <div className="w-3/12 border border-br rounded-2xl p-4">
+        <div className="flex flex-col border border-br rounded-2xl">
           <img className="rounded-t-2xl max-h-60 min-h-50 object-cover" src="/images/blog.jpg" alt="" />
           <div className="flex flex-col gap-2 px-4 py-6">
             <h4 className="text-xl text-light">عنوان پست های آزمایشی در این قسمت</h4>
